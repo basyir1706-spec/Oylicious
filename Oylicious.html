@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oylicious - Filling Desire</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --c-green-soft: #f0f5f1;
+            --c-green-medium: #a8bba4;
+            --c-white: #ffffff;
+            --c-gold: #D4AF37;
+            --c-gold-darker: #c5a033;
+            --c-dark: #2c3e50;
+            --font-primary: 'Poppins', sans-serif;
+            --font-secondary: 'Montserrat', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--c-dark);
+            background-color: var(--c-white);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-secondary);
+            font-weight: 600;
+        }
+
+        /* --- Navigasi --- */
+        .navbar-custom {
+            background-color: transparent;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            padding: 1rem 0;
+        }
+
+        .navbar-custom.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-family: var(--font-secondary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--c-gold);
+        }
+
+        .navbar-logo {
+            height: 45px;
+            width: auto;
+            transform: translateY(-2px);
+        }
+
+        .navbar-custom .nav-link {
+            color: var(--c-dark);
+            font-weight: 500;
+            margin: 0 0.5rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link.active {
+            color: var(--c-gold);
+        }
+
+        .navbar-custom .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--c-gold);
+            transition: width 0.3s ease;
+        }
+
+        .navbar-custom .nav-link:hover::after,
+        .navbar-custom .nav-link.active::after {
+            width: 50%;
+        }
+
+        /* --- Butang Kustom --- */
+        .btn-custom-gold {
+            background-color: var(--c-gold);
+            color: var(--c-white);
+            border: 2px solid var(--c-gold);
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-custom-gold:hover {
+            background-color: var(--c-gold-darker);
+            border-color: var(--c-gold-darker);
+            color: var(--c-white);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: var(--c-white);
+            text-align: left;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(44, 62, 80, 0.7) 0%, rgba(44, 62, 80, 0.3) 60%, transparent 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-tagline {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--c-white);
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-tagline .highlight {
+            color: var(--c-gold);
+        }
+
+        .hero-section p {
+            font-size: 1.15rem;
+            margin: 1.5rem 0 2.5rem;
+            font-weight: 300;
+            color: var(--c-white);
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- Tajuk Seksyen --- */
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--c-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: var(--c-gold);
+        }
+
+        /* --- About Us Section (DIKEMASKINI: Static Icon Cards) --- */
+        #about {
+            padding: 6rem 0;
+            background-color: var(--c-green-soft); /* Tukar background ke hijau lembut */
+        }
+        .about-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+            text-align: center;
+        }
+
+        /* Gaya kad ciri baru (bukan flip) */
+        .feature-card {
+            background-color: var(--c-white);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border-bottom: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+            border-bottom-color: var(--c-gold);
+        }
+
+        .feature-card i {
+            font-size: 3.5rem;
+            color: var(--c-gold);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .feature-card h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: var(--font-secondary);
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* --- Seksyen Ciri Produk & Senarai --- */
+        .product-feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .product-feature-list li {
+            display: flex;
+            align-items: flex-start;
+            font-size: 1.05rem;
+            margin-bottom: 0.75rem;
+            color: #555;
+        }
+        .product-feature-list i {
+            font-size: 1.2rem;
+            color: var(--c-gold);
+            margin-right: 1rem;
+            margin-top: 5px;
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        /* --- Galeri Grid Estetik --- */
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        /* --- Seksyen Testimoni --- */
+        #testimonials {
+            padding: 6rem 0;
+            background-color: var(--c-white);
+        }
+
+        .carousel-item {
+            padding: 2rem 4rem;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .testimonial-author {
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--c-gold);
+        }
+
+        .testimonial-author span {
+            display: block;
+            font-size: 0.9rem;
+            color: #777;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: var(--c-green-medium);
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            border: none;
+            margin: 0 5px;
+        }
+
+        .carousel-indicators .active {
+            background-color: var(--c-gold);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1) grayscale(100) brightness(0.5);
+        }
+
+        /* --- Seksyen Hubungi --- */
+        #contact {
+            padding: 6rem 0;
+            background-color: var(--c-white); /* Tukar selang seli background */
+        }
+
+        .contact-form {
+            background: var(--c-green-soft); /* Form jadi hijau lembut sikit */
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .form-control {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 0.9rem;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--c-gold);
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.2);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--c-dark);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--c-dark);
+            color: #aaa;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer .social-icons a {
+            color: #aaa;
+            font-size: 1.5rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: var(--c-gold);
+        }
+
+        .footer .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsif untuk order column */
+        @media (max-width: 991.98px) {
+            .mobile-bottom {
+                order: 2 !important;
+            }
+            .mobile-top {
+                order: 1 !important;
+                margin-bottom: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="Logo_Oylicious-removebg-preview (1).png" alt="Oylicious Logo" class="navbar-logo me-2">
+                Oylicious
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product-details">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <video playsinline autoplay muted loop class="hero-video">
+            <source src="Hero animation.mp4" type="video/mp4">
+            Maaf, pelayar anda tidak menyokong video ini.
+        </video>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="hero-content" data-aos="fade-right">
+                        <h1 class="hero-tagline">
+                            Manjakan Selera Anda,
+                            <span class="highlight">Nikmat Luar Biasa</span>
+                        </h1>
+                        <p>
+                            Kami membawakan kegemaran klasik seperti ABC dan Rempeyek Cheese, diolah dengan bahan-bahan premium dan sentuhan moden. Rasai perbezaannya.
+                        </p>
+                        <a href="#product-details" class="btn btn-custom-gold">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container" data-aos="fade-up">
+            <div class="about-intro">
+                <div class="section-title mb-4">
+                     <h2>Tentang Oylicious</h2>
+                </div>
+                <p class="lead">
+                    Di Oylicious, kami memahami selera rakyat Malaysia. Sama ada anda mencari penyejuk tekak di tengah hari yang terik atau snek rangup untuk dikunyah bila-bila masa, kami ada jawapannya.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-sun"></i>
+                        <h4>Penyejuk Musim Panas</h4>
+                        <p>
+                            ABC Oylicious adalah penyelamat anda ketika cuaca panas terik. Sejuk, manis, dan penuh dengan bahan yang menyegarkan tekak anda serta-merta.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                        <h4>Pemuas 'Craving'</h4>
+                        <p>
+                            Tengah 'craving' sesuatu yang rangup dan berlemak? Rempeyek Cheese kami dicipta khas untuk menjadi teman setia anda ketika menonton TV atau bersantai.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-heart"></i>
+                        <h4>Kepuasan Dijamin</h4>
+                        <p>
+                            Kami hanya menggunakan bahan terbaik—dari kordial jagung yang pekat hinggalah keju premium—untuk memastikan setiap suapan memberikan senyuman.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="product-details" class="py-5" style="background-color: var(--c-white);"> <div class="container">
+            
+            <div class="row g-5 align-items-center" data-aos="fade-up">
+                <div class="col-lg-6 mobile-top">
+                    <img src="abc.jpg" alt="Oylicious ABC Royale" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6 mobile-bottom">
+                    <h2 class="display-5 fw-bold mb-3">ABC</h2>
+                    <p class="lead" style="color: #555;">
+                        Nikmati kesegaran kami. Air batu campur klasik yang disediakan dengan penuh teliti untuk kepuasan anda.
+                    </p>
+                    <p style="color: #555;">
+                        Setiap mangkuk dilengkapi dengan 8 bahan utama termasuk buah kabung, kacang tanah, dan kordial jagung yang pekat. Sesuai dinikmati untuk menghilangkan dahaga ketika cuaca panas.
+                    </p>
+                    <h5 class="fw-bold mt-4 mb-3">8 Bahan Utama Kami:</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                             <ul class="product-feature-list">
+                                <li><i class="fa-solid fa-check"></i>Kordial Jagung</li>
+                                <li><i class="fa-solid fa-check"></i>Kacang Merah</li>
+                                <li><i class="fa-solid fa-check"></i>Kacang Tanah</li>
+                                <li><i class="fa-solid fa-check"></i>Cendol</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="product-feature-list">
+                                <li><i class="fa-solid fa-check"></i>Cincau</li>
+                                <li><i class="fa-solid fa-check"></i>Jelly</li>
+                                <li><i class="fa-solid fa-check"></i>Buah Kabung</li>
+                                <li><i class="fa-solid fa-check"></i>Sagu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 align-items-center mt-5 pt-5" data-aos="fade-up">
+                <div class="col-lg-6 order-lg-1 mobile-bottom">
+                    <h2 class="display-5 fw-bold mb-3">Rempeyek Cheese</h2>
+                    <p class="lead" style="color: #555;">
+                        Rempeyek tradisional yang diberi nafas baru. Rempeyek yang rangup kini disaluti dengan serbuk keju yang enak.
+                    </p>
+                    <p style="color: #555;">
+                        Sesuai dijadikan snek harian untuk dinikmati bersama keluarga atau ketika menonton televisyen. Gabungan rasa masin rempeyek dan lemak manis keju pasti menambat selera anda.
+                    </p>
+                    <h5 class="fw-bold mt-4 mb-3">Ciri-ciri Produk:</h5>
+                    <ul class="product-feature-list">
+                        <li><i class="fa-solid fa-check"></i> <strong>Salutan Keju Penuh:</strong> Setiap kepingan disaluti rata dengan serbuk keju.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Balang Kedap Udara:</strong> Memastikan rempeyek kekal rangup lebih lama.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Tekstur Rangup:</strong> Nipis dan mudah dikunyah.</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-custom-gold mt-3">Dapatkan Sekarang</a>
+                </div>
+
+                <div class="col-lg-6 order-lg-2 mobile-top gallery-grid">
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-md-8 mx-auto">
+                            <img src="RC 1.jpg" alt="Balang Rempeyek Cheese Oylicious" class="img-fluid main-img">
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-6">
+                            <img src="RC 2.jpg" alt="Rempeyek Cheese Close up" class="img-fluid sub-img">
+                        </div>
+                        <div class="col-6">
+                            <img src="RC 3.jpg" alt="Pelanggan Gembira" class="img-fluid sub-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 align-items-center mt-5 pt-5" data-aos="fade-up">
+                <div class="col-lg-6 mobile-top">
+                    <img src="air minuman.jpg" alt="Pelbagai Minuman Oylicious" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6 mobile-bottom">
+                    <h2 class="display-5 fw-bold mb-3">Minuman Sejuk & Panas</h2>
+                    <p class="lead" style="color: #555;">Lengkapkan hidangan anda dengan pelbagai pilihan minuman kami yang menyegarkan.</p>
+                    <h5 class="fw-bold mt-4 mb-3">Pilihan Sedia Ada:</h5>
+                    <ul class="product-feature-list">
+                        <li><i class="fa-solid fa-check"></i>Coca-Cola & Minuman Berkarbonat</li>
+                        <li><i class="fa-solid fa-check"></i>Kopi Wonda</li>
+                        <li><i class="fa-solid fa-check"></i>Air Kotak (Drinho, dll.)</li>
+                        <li><i class="fa-solid fa-check"></i>Air Mineral</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5" style="background-color: var(--c-green-soft);"> <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Apa Kata Pelanggan Kami</h2>
+                <p>Pengalaman mereka adalah jaminan kualiti kami.</p>
+            </div>
+
+            <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="testimonial-quote">"Oylicious mengubah cara saya menikmati snek. Rempeyek Cheese mereka SANGAT rangup dan berkeju. Susah nak berhenti makan!"</p>
+                        <p class="testimonial-author">Aishah Kassim <span>- Pengurus Pemasaran</span></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="testimonial-quote">"Saya dah cuba banyak ABC, tapi ABC 'Royale' dari Oylicious memang lain. Penuh dengan isi dan sirapnya 'kaw'!"</p>
+                        <p class="testimonial-author">Ben Lee <span>- Peminat Desert</span></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="testimonial-quote">"Sangat berbaloi. Anda boleh rasa kualiti premium dalam setiap gigitan. Pembungkusan pun kemas. Sangat disyorkan!"</p>
+                        <p class="testimonial-author">Sarah Chen <span>- Foodie</span></p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Hubungi Kami</h2>
+                <p>Ada soalan atau tempahan? Kami sedia mendengar.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Nama Penuh</label>
+                                <input type="text" class="form-control" id="inputName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Alamat Emel</label>
+                                <input type="email" class="form-control" id="inputEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputMessage" class="form-label">Mesej Anda</label>
+                                <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-custom-gold">Hantar Mesej</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">
+                &copy; 2025 Oylicious. Hak Cipta Terpelihara.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
