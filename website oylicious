@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oylicious - Pencuci Mulut Tradisional & Snek Viral</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Sembunyikan semua "halaman" secara lalai */
+        .page-content {
+            display: none;
+        }
+        
+        /* Paparkan halaman 'aktif' yang pertama (Home) */
+        #home-content {
+            display: block;
+        }
+
+        /* Gaya tambahan untuk BMC */
+        .bmc-table td {
+            vertical-align: top;
+            padding: 1rem;
+        }
+        .bmc-table h5 {
+            color: #0d6efd; /* Biru Bootstrap */
+            font-weight: bold;
+        }
+        
+        /* Gaya untuk video latar belakang di Hero Section */
+        #heroVideo {
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" data-target-page="home-content">
+                <i class="bi bi-cup-straw"></i>
+                Oylicious
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-target-page="home-content">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-target-page="pasukan-content">Pasukan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-target-page="produk-content">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-target-page="organisasi-content">Organisasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-target-page="pemasaran-content">Pemasaran</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-target-page="kewangan-content">Kewangan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-target-page="kesimpulan-content">Kesimpulan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-target-page="lampiran-content">Lampiran</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <div id="home-content" class="page-content">
+            <header class="py-5 position-relative text-white" style="height: 500px; overflow: hidden;">
+                
+                <video autoplay muted loop id="heroVideo" class="position-absolute w-100 h-100" style="object-fit: cover; z-index: -1; top: 0;">
+                    <source src="Hero animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.4); top: 0; left: 0; z-index: -1;"></div>
+
+                <div class="container text-center py-5 h-100 d-flex flex-column justify-content-center align-items-center position-relative">
+                    <img src="Whisk_6aa9d8fb929f13782ee4b73c041f74c2dr.png" alt="Logo Oylicious" style="width: 150px;" class="mb-3 border border-white p-2 rounded-circle"> 
+                    
+                    <h1 class="display-3 fw-bolder text-warning">OYLICIOUS</h1> 
+                    <p class="lead fw-light text-uppercase">Pencuci Mulut Tradisional & Snek Viral Paling Laris!</p> 
+                    <h2 class="mt-4 mb-4">Cubalah ABC Resepi Warisan & Rempeyek Cheese Pedas Premium!</h2>
+                    
+                    
+                    
+                    <p class="mt-3 small">Hasil Projek DFK30033 - Politeknik Besut</p> 
+                </div>
+            </header>
+            
+            <section class="container my-5">
+                <h2 class="text-center mb-4">Ringkasan Eksekutif</h2> 
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <p>Oylicious merupakan syarikat mini yang terdiri daripada 4 orang rakan kongsi bersama iaitu Ahmad Mubassyir, Syamsul Safwan, Muhammad Firdaus dan Haziq Hakimi. Syarikat Oylicious mempunyai HQ yang bertapak di Politeknik Besut Terengganu.</p>
+                        <p>Antara Specialist kami adalah ABC&ABJ, Rempeyek Cheese dan Air minuman pelbagai brand. Pasaran sasaran utama kami adalah dalam sekitar Politeknik namun kami turut melakukan aktiviti jualan di luar kawasan dan antara target adalah mereka yang gemar akan kerangupan  cheese yang cair di mulut dari Rempeyek Cheese. Air pelbagai jenis turut disediakan untuk yang sedang dahaga.</p>
+                        <p>Bagi memasarkan produk-produk kami, kami telah menggunakan beberapa strategi pemasaran. Antaranya ialah proses penghantaran melalui COD ataupun menyediakan booth pada hari-hari penting menghadirkan gerai kami apabila mereka menginginkan produk kami. Memandangkan tahap persaingan yang tinggi dalam kalangan masyarakat tempatan, Oylicious akan melipatgandakan usaha untuk meneruskan strategi pemasaran yang sedia ada bagi meningkatkan syer pasaran. Oleh yang demikian, Oylicious amat mengambil berat terhadap kualiti pengeluaran dan tahap kebersihan produk kami agar pelanggan sentiasa berpuas hati dan menyokong produk kami.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="pasukan-content" class="page-content">
+            <section class="container my-5">
+                <h2 class="text-center mb-4">Latarbelakang Pekongsi</h2> 
+                <div class="table-responsive mb-5">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>NAMA</th>
+                                <th>NO.MATRIX</th>
+                                <th>NO.IC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AHMAD MUBASSYIR BIN AHMAD MUKRI</td>
+                                <td>F1056</td>
+                                <td>060619031017</td>
+                            </tr>
+                            <tr>
+                                <td>AHMAD HAZIQ HAKIMI BIN EZANI</td>
+                                <td>F1015</td>
+                                <td>060521030745</td>
+                            </tr>
+                            <tr>
+                                <td>MUHAMMAD SYAMSUL SAFWAN BIN ABDULLAH</td>
+                                <td>F1055</td>
+                                <td>060417110091</td>
+                            </tr>
+                            <tr>
+                                <td>MUHAMMAD FIRDAUS BIN KAMRI</td>
+                                <td>F1048</td>
+                                <td>060503030047</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <img src="bassyir.jpg" class="card-img-top object-fit-con" alt="Ahmad Mubassyir" style="height: 350px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Ahmad Mubassyir Bin Ahmad Mukri</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-striped">
+                                        <tbody>
+                                            <tr><th style="width: 40%;">Nama Penuh</th><td>Ahmad Mubassyir Bin Ahmad Mukri</td></tr>
+                                            <tr><th>No. Kad Pengenalan</th><td>0606-190-31017</td></tr>
+                                            <tr><th>Tarikh Lahir</th><td>16 Jun 2006</td></tr>
+                                            <tr><th>Umur</th><td>19 Tahun</td></tr>
+                                            <tr><th>Jantina</th><td>Lelaki</td></tr>
+                                            <tr><th>Alamat Tetap</th><td>Lot 4020 Kampung Padang Lepai Kadok Kota Bharu Kelantan</td></tr>
+                                            <tr><th>No. Telefon</th><td>011-6179-5721</td></tr>
+                                            <tr><th>Taraf Perkahwinan</th><td>Bujang</td></tr>
+                                            <tr><th>Kelulusan Akademik</th><td>SPM</td></tr>
+                                            <tr><th>Kursus</th><td>Khursus pengusahawanan Muda</td></tr>
+                                            <tr><th>Kemahiran</th><td>Komunikasi</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <img src="Haziq.jpg" class="card-img-top" alt="Ahmad Haziq Hakimi" style="height: 350px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Ahmad Haziq Hakimi Bin Ezani</h5>
+                                    <div class="table-responsive">
+                                    <table class="table table-sm table-striped">
+                                        <tbody>
+                                            <tr><th style="width: 40%;">Nama Penuh</th><td>Ahmad Haziq Hakimi Bin Ezani</td></tr>
+                                            <tr><th>No. Kad Pengenalan</th><td>0606-190-31017</td></tr>
+                                            <tr><th>Tarikh Lahir</th><td>20 April 2026</td></tr>
+                                            <tr><th>Umur</th><td>19 Tahun</td></tr>
+                                            <tr><th>Jantina</th><td>Lelaki</td></tr>
+                                            <tr><th>Alamat Tetap</th><td>Lot 4020 Kampung Pasir Akar 22000 Terengganu Jerteh Besut</td></tr>
+                                            <tr><th>No. Telefon</th><td>0195044975</td></tr>
+                                            <tr><th>Taraf Perkahwinan</th><td>Bujang</td></tr>
+                                            <tr><th>Kelulusan Akademik</th><td>SPM</td></tr>
+                                            <tr><th>Kursus</th><td>Khursus pengusahawanan Muda</td></tr>
+                                            <tr><th>Kemahiran</th><td>Editing, Promotion</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <img src="safwan.jpg" class="card-img-top" alt="Muhammad Syamsul Safwan" style="height: 350px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Muhammad Syamsul Safwan Bin Abdullah</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-striped">
+                                        <tbody>
+                                            <tr><th style="width: 40%;">Nama Penuh</th><td>Muhammad Syamsul Safwan Bin Abdullah</td></tr>
+                                            <tr><th>No. Kad Pengenalan</th><td>0604-17-110091</td></tr>
+                                            <tr><th>Tarikh Lahir</th><td>17 April 2006</td></tr>
+                                            <tr><th>Umur</th><td>19 Tahun</td></tr>
+                                            <tr><th>Jantina</th><td>Lelaki</td></tr>
+                                            <tr><th>Alamat Tetap</th><td>561 Jalan Kubur, Kampung Cherang Meliling, Jerteh, Terengganu</td></tr>
+                                            <tr><th>No. Telefon</th><td>01139164412</td></tr>
+                                            <tr><th>Taraf Perkahwinan</th><td>Bujang</td></tr>
+                                            <tr><th>Kelulusan Akademik</th><td>SPM</td></tr>
+                                            <tr><th>Kursus</th><td>Khursus pengusahawanan Muda</td></tr>
+                                            <tr><th>Kemahiran</th><td>Akauntan</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <img src="Firdaus.jpg" class="card-img-top" alt="Muhammad Firdaus" style="height: 350px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Muhammad Firdaus Bin Kamri</h5>
+                                    <div class="table-responsive">
+                                    <table class="table table-sm table-striped">
+                                        <tbody>
+                                            <tr><th style="width: 40%;">Nama Penuh</th><td>Muhammad Firdaus Bin Kamri</td></tr>
+                                            <tr><th>No. Kad Pengenalan</th><td>060520-03-0194</td></tr>
+                                            <tr><th>Tarikh Lahir</th><td>16 Jun 2006</td></tr>
+                                            <tr><th>Umur</th><td>19 Tahun</td></tr>
+                                            <tr><th>Jantina</th><td>Lelaki</td></tr>
+                                            <tr><th>Alamat Tetap</th><td>Lot 4020 Kampung Padang Lepai Kadok Kota Bharu Kelantan</td></tr>
+                                            <tr><th>No. Telefon</th><td>011-6179-5721</td></tr>
+                                            <tr><th>Taraf Perkahwinan</th><td>Bujang</td></tr>
+                                            <tr><th>Kelulusan Akademik</th><td>SPM</td></tr>
+                                            <tr><th>Kursus</th><td>Khursus pengusahawanan Muda</td></tr>
+                                            <tr><th>Kemahiran</th><td>Logistik</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="produk-content" class="page-content">
+            <section class="container my-5">
+                <h2 class="text-center mb-4">Latarbelakang Produk</h2> 
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 15%;">Jenis Produk</th> 
+                                <th style="width: 30%;">Maklumat Sasaran</th> 
+                                <th style="width: 35%;">Unique Selling Proposition (USP)</th> 
+                                <th style="width: 20%;">Gambar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ABC (Air Batu Campur)</strong> </td>
+                                <td>
+                                    <ul class="list-unstyled mb-0 small">
+                                        <li><strong>1. Umur:</strong> Semua peringkat umur</li>
+                                        <li><strong>2. Jantina:</strong> Lelaki dan perempuan</li>
+                                        <li><strong>3. Lokasi:</strong> Pelanggan sekitar gerai/kafe, penduduk setempat</li>
+                                        <li><strong>4. Pekerjaan:</strong> Pelajar, keluarga, pekerja</li>
+                                        <li><strong>5. Tingkah laku:</strong> Mencari pencuci mulut, singgah pada hari panas, makan selepas hidangan utama.</li>
+                                        <li><strong>6. Sosiografi:</strong> Datang bersama rakan atau keluarga.</li>
+                                        <li><strong>7. Psikografi:</strong> Menggemari rasa manis, sejuk dan pelbagai tekstur (kenyal, rangup, lembut).</li>
+                                        <li><strong>8. Media Sosial:</strong> Instagram, Facebook</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-unstyled mb-0 small">
+                                        <li>+ Ais dikisar halus.</li>
+                                        <li>+ Pilihan topping utama yang pelbagai:
+                                            <ul>
+                                                <li>Kordial Jagung</li>
+                                                <li>Kacang Merah</li>
+                                                <li>Kacang Tanah</li>
+                                                <li>Cendol</li>
+                                                <li>Cincau</li>
+                                                <li>Jelly</li>
+                                                <li>Buah Kabung</li>
+                                                <li>Sagu</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <img src="abc.jpg" class="img-fluid rounded" alt="Gambar ABC">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rempeyek Cheese</strong></td>
+                                <td>
+                                    <ul class="list-unstyled mb-0 small">
+                                        <li><strong>1. Umur:</strong> 15-45 tahun</li>
+                                        <li><strong>2. Jantina:</strong> Lelaki dan perempuan</li>
+                                        <li><strong>3. Lokasi:</strong> Seluruh Malaysia (jualan online/pos)</li>
+                                        <li><strong>4. Pekerjaan:</strong> Pelajar, pekerja pejabat, suri rumah</li>
+                                        <li><strong>5. Tingkah laku:</strong> Suka mengunyah (snacking) sambil bekerja/belajar, membeli snek viral secara online.</li>
+                                        <li><strong>6. Sosiografi:</strong> Aktif di media sosial, berkongsi 'food review'.</li>
+                                        <li><strong>7. Psikografi:</strong> Suka mencuba snek gabungan tradisional & moden, gemar rasa masin, pedas & keju.</li>
+                                        <li><strong>8. Media Sosial:</strong> Tiktok, Instagram, Facebook, Whatsapp</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                        <ul class="list-unstyled mb-0 small">
+                                        <li>+ Gabungan unik snek tradisional (rempeyek) dengan perisa moden (keju).</li>
+                                        <li>+ Sangat rangup dan tidak berminyak.</li>
+                                        <li>+ Salutan serbuk keju premium yang banyak dan rasa "umami".</li>
+                                        <li>+ Pembungkusan (cth: balang) yang kedap udara dan mudah dibawa.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <img src="rempeyek cheese.jpg" class="img-fluid rounded" alt="Gambar Rempeyek Cheese">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Air Minuman (Fanta/Coca-Cola)</strong></td>
+                                <td>
+                                    <ul class="list-unstyled mb-0 small">
+                                        <li><strong>1. Umur:</strong> Semua peringkat umur</li>
+                                        <li><strong>2. Jantina:</strong> Lelaki dan perempuan</li>
+                                        <li><strong>3. Lokasi:</strong> Pelanggan sekitar gerai/kafe</li>
+                                        <li><strong>4. Pekerjaan:</strong> Sesiapa sahaja yang singgah makan.</li>
+                                        <li><strong>5. Tingkah laku:</strong> Membeli minuman sebagai pelengkap hidangan utama.</li>
+                                        <li><strong>6. Sosiografi:</strong> Pengguna umum.</li>
+                                        <li><strong>7. Psikografi:</strong> Menggemari minuman sejuk, bergas, dan manis untuk menghilangkan dahaga.</li>
+                                        <li><strong>8. Media Sosial:</strong> Facebook (Promosi set kombo)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                        <ul class="list-unstyled mb-0 small">
+                                        <li>+ Pilihan jenama popular (Fanta, Coca-Cola).</li>
+                                        <li>+ Dihidang sejuk bersama ais.</li>
+                                        <li>+ Minuman pelengkap yang sempurna untuk makanan berat atau snek.</li>
+                                        <li>+ Menghilangkan dahaga dengan segera.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <img src="air minuman.jpg" class="img-fluid rounded" alt="Gambar Air Minuman">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="organisasi-content" class="page-content">
+            <section class="bg-light py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Aspek Pentadbiran & Operasi</h2> 
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-10">
+                            <h3>Visi, Misi & Objektif</h3>
+                            <div class="mb-3">
+                                <h5 class="text-primary">VISI</h5> 
+                                <blockquote class="blockquote">
+                                    <p>Oylicious sentiasa memberikan yang terbaik dalam ketika menjalankan tugas dengan memberikan pelayanan yang terbaik. Dengan sikap konsisten kami percaya untuk menjadi pilihan nombor 1.</p>
+                                </blockquote>
+                            </div>
+                            <div class="mb-3">
+                                <h5 class="text-primary">MISI</h5> 
+                                <blockquote class="blockquote">
+                                    <p>Misi Oylicious ialah memberikan layanan terbaik kepada pelanggan, menjaga kualiti produk, mengutamakan kepuasan pelanggan, dan berusaha menjadi pilihan nombor satu di pasaran.</p>
+                                </blockquote>
+                            </div>
+                            <div>
+                                <h5 class="text-primary">Objektif</h5> 
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>5.3.1: Menyajikan makanan yang memuaskan bagi pihak Consumer.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>5.3.2: Mempunyai target pasaran yang jelas dan memperkirakan setiap keuntungan dari hasil jualan.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>5.3.3: Menjamin Kuality yang terbaik dan stock akan di Restock dengan kadar yang cepat agar Consumer berpuas hati.</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>5.3.4: Sentiasa menerima kritikan daripada pelanggan dan bersedia mengubah menjadi lebih baik sebagai Company.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-10">
+                            <h3 class="text-center mb-4">Carta Organisasi</h3> 
+                            <div class="row justify-content-center text-center">
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="card shadow-sm mb-3">
+                                        <div class="card-header bg-dark text-white">
+                                            Pengurus 
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-0">Muhammad Syamsul Safwan Bin Abdullah</h5> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                        <div style="width: 2px; height: 30px; background-color: #dee2e6;"></div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-10" style="height: 2px; background-color: #dee2e6;"></div>
+                            </div>
+                            <div class="row justify-content-center">
+                                   <div class="col-10 d-flex justify-content-around">
+                                   <div style="width: 2px; height: 30px; background-color: #dee2e6;"></div>
+                                   <div style="width: 2px; height: 30px; background-color: #dee2e6;"></div>
+                                   <div style="width: 2px; height: 30px; background-color: #dee2e6;"></div>
+                                  </div>
+                            </div>
+
+                            <div class="row g-2 mt-0 text-center justify-content-center">
+                                <div class="col-12 col-lg-4">
+                                    <div class="card shadow-sm h-100">
+                                        <div class="card-header bg-primary text-white" style="font-size: 0.9rem; padding: 0.5rem;">
+                                            Eksekutif Operasi 
+                                        </div>
+                                        <div class="card-body d-flex align-items-center justify-content-center p-2">
+                                            <h6 class="card-title mb-0" style="font-size: 0.9rem;">Muhammad Firdaus bin Kamri</h6> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="card shadow-sm h-100">
+                                        <div class="card-header bg-success text-white" style="font-size: 0.9rem; padding: 0.5rem;">
+                                            Eksekutif Kreatif 
+                                        </div>
+                                        <div class="card-body d-flex align-items-center justify-content-center p-2">
+                                            <h6 class="card-title mb-0" style="font-size: 0.9rem;">Ahmad Haziq Hakimi Bin Ezani</h6> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="card shadow-sm h-100">
+                                        <div class="card-header bg-warning text-dark" style="font-size: 0.9rem; padding: 0.5rem;">
+                                            Eksekutif Kewangan 
+                                        </div>
+                                        <div class="card-body d-flex align-items-center justify-content-center p-2">
+                                            <h6 class="card-title mb-0" style="font-size: 0.9rem;">AHMAD MUBASSYIR BIN AHMAD MUKRI</h6> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3>Spesifikasi Tugas</h3> 
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Jawatan</th>
+                                        <th>Tanggungjawab Utama</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Pengurus</strong></td>
+                                        <td>
+                                            <ul>
+                                                <li>Memastikan ahli kumpulan menjalankan setiap tugasan yang diberi</li>
+                                                <li>Memastikan seluruh barang perlengkapan dan bahan penjualan bercukupan</li>
+                                                <li>Membuat persetujuan dengan kiosk untuk menyediakan air batu untuk hari penjualan</li>
+                                                <li>Memastikan aliran kewangan sentiasa Transparent</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Eksekutif Kreatif</strong></td>
+                                        <td>
+                                            <ul>
+                                                <li>Memastikan Page utama sentiasa hidup dengan melakukan update dengan content dan promosi yang menarik</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Eksekutif Kewangan</strong></td>
+                                        <td>
+                                            <ul>
+                                                <li>Memastikan aliran wang keluar dan masuk, tersusun dengan rekod yang jelas dan sentiasa mencatat hasil jualan supaya dapat keuntungan</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Eksekutif Operasi</strong></td>
+                                        <td>
+                                            <ul>
+                                                <li>Memastikan hari penjualan keseluruh ahli kumpulan memberikan yang terbaik ketika menjalanka penjualan sepertimana menjaga kualiti dengan sukatan yang sama bagi setiap pembelian</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h4>Kos Bahan (COGS)</h4> 
+                            <table class="table table-sm table-striped table-bordered">
+                                <thead class="table-light text-center">
+                                    <tr>
+                                        <th>BIL.</th>
+                                        <th>BAHAN</th>
+                                        <th>UNIT</th>
+                                        <th>HARGA KOS(RM)</th>
+                                        <th>PEMBEKAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td>BAHAN ABC</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-end">244</td>
+                                        <td>PASAR PAGI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td>REMPEYEK CHEESE</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-end">150</td>
+                                        <td>PEMBEKAL ONLINE</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td>AIR MINUMAN</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-end">300</td>
+                                        <td>KEDAI BORONG</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="fw-bold">
+                                    <tr>
+                                        <td colspan="3" class="text-end">JUMLAH</td>
+                                        <td class="text-end">694</td> 
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Kos Operasi (OPEX)</h4> 
+                            <table class="table table-sm table-striped table-bordered">
+                                       <thead class="table-light text-center">
+                                    <tr>
+                                        <th>BIL.</th>
+                                        <th>BAHAN</th>
+                                        <th>UNIT</th>
+                                        <th>HARGA KOS(RM)</th>
+                                        <th>PEMBEKAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td>Minyak Petrol</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-end">20</td>
+                                        <td>Pam petrol</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td>Plastik Beg</td>
+                                        <td class="text-center">3</td>
+                                        <td class="text-end">12</td>
+                                        <td>Eco Shop</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td>Upah Runner</td>
+                                        <td class="text-center">-</td>
+                                        <td class="text-end">20</td>
+                                        <td>Faikar Hadif</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="fw-bold">
+                                    <tr>
+                                        <td colspan="3" class="text-end">JUMLAH</td>
+                                        <td class="text-end">52</td> 
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="pemasaran-content" class="page-content">
+               <section class="container my-5">
+                <h2 class="text-center mb-4">Aspek Pemasaran</h2> 
+                <h3 class="mb-3">Campuran Pemasaran (4P)</h3> 
+                <div class="accordion" id="accordion4P">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProduk" aria-expanded="true" aria-controls="collapseProduk">
+                                <strong>7.1.1 Strategi Produk/Perkhidmatan</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseProduk" class="accordion-collapse collapse show" data-bs-parent="#accordion4P">
+                            <div class="accordion-body">
+                                <p>Strategi produk kami memberi tumpuan kepada kualiti, pembungkusan, dan persembahan. Pembungkusan dan pelebelan adalah aspek yang penting kerana ia selalunya menjadi tumpuan utama dan tanggapan pertama pelanggan. Dari jauh, pelanggan nampak bungkusannya; jika menarik, mereka akan datang dekat.</p>
+                                <strong>1) ABC (Air Batu Campur):</strong>
+                                <ul>
+                                    <li><strong>Kualiti & Persembahan:</strong> Kami amat mementingkan kualiti dengan menggunakan ais yang dikisar halus sehingga teksturnya lembut. Ini digabungkan dengan bahan-bahan topping utama yang segar dan berkualiti seperti kordial jagung, kacang merah, kacang tanah, cendol, cincau, jelly, buah kabung, dan sagu.</li>
+                                    <li><strong>Pembungkusan:</strong> Kami menggunakan cawan plastik lutsinar yang teguh dan sudu yang berkualiti. Pembungkusan lutsinar ini bertindak sebagai "pelabelan" visual yang sangat strategik. la membolehkan pelanggan melihat dengan jelas setiap lapisan topping yang berwarna-warni dan menarik.</li>
+                                </ul>
+                                <strong>2) Rempeyek Cheese:</strong>
+                                <ul>
+                                    <li><strong>Kualiti:</strong> Ini adalah produk snek inovatif kami yang rangup, menggabungkan rasa tradisional rempeyek yang digemari ramai dengan salutan serbuk keju premium yang tebal, selaras dengan trend snek semasa.</li>
+                                    <li><strong>Pembungkusan & Pelabelan:</strong> Produk akan dibungkus dalam pek kedap udara (atau balang kecil) yang direka untuk mudah dibawa oleh pelajar ke kelas atau bilik. Tujuan utama pembungkusan ini adalah untuk melindungi kerangupan produk daripada lemau. Pelabelan akan memaparkan jenama kami, perisa "Rempeyek Cheese" yang jelas, dan maklumat penting untuk pesanan semula.</li>
+                                </ul>
+                                <strong>3) Air Minuman (Fanta / Coca-Cola):</strong>
+                                <ul>
+                                    <li><strong>Kualiti:</strong> Kami menawarkan jenama minuman berkarbonat yang popular dan sedia dikenali ramai.</li>
+                                    <li><strong>Penyajian:</strong> Minuman ini akan sentiasa dihidangkan sejuk. Kami akan menyimpannya di dalam kotak ais polisterin khas untuk menjamin kesegaran maksimum.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHarga" aria-expanded="false" aria-controls="collapseHarga">
+                                <strong>7.1.2 Strategi Harga</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseHarga" class="accordion-collapse collapse" data-bs-parent="#accordion4P">
+                            <div class="accordion-body">
+                                <p>Strategi harga kami berasaskan kos-tambah dan harga bersaing mengikut keadaan di politeknik. Harga yang diletakkan mestilah meliputi semua kos dan pada masa yang sama memberi pulangan yang setimpal.</p>
+                                <ul>
+                                    <li><strong>Penetapan Harga:</strong> Harga jualan akan dikira berdasarkan jumlah kos bahan mentah dan ditambah dengan margin keuntungan yang berpatutan.</li>
+                                    <li><strong>Pasaran Sasaran:</strong> Harga kami adalah pada tahap mampu milik dan berpatutan, khasnya untuk sasaran utama kami iaitu pelajar politeknik.</li>
+                                    <li><strong>Persaingan:</strong> Sebelum meletakkan harga, kami akan meninjau harga snek dan minuman di kafeteria atau koperasi politeknik. Ini penting supaya harga kami kekal bersaing, menarik, dan dirasakan 'berbaloi' oleh pelanggan.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePromosi" aria-expanded="false" aria-controls="collapsePromosi">
+                                <strong>7.1.3 Strategi Promosi</strong>
+                            </button>
+                        </h2>
+                        <div id="collapsePromosi" class="accordion-collapse collapse" data-bs-parent="#accordion4P">
+                            <div class="accordion-body">
+                                <p>Pasaran kami terhad di dalam politeknik sahaja. Oleh itu, strategi promosi kami akan menggabungkan kaedah digital dan fizikal.</p>
+                                <ul>
+                                    <li><strong>Digital:</strong> WhatsApp ialah alat promosi utama kami. Kami akan gunakan "WhatsApp Status" dan "WhatsApp Group" kelas/kolej kediaman. Kami juga akan gunakan "IG Story" atau "FB Story" untuk tayang gambar dan video produk.</li>
+                                    <li><strong>Fizikal:</strong> Promosi terbaik kami ialah jualan terus semasa acara. Kami juga akan letakkan poster ringkas atau 'bunting' kecil di meja jualan kami. Akhir sekali, kami akan gunakan promosi mulut ke mulut, dengan memaklumkan sendiri kepada rakan-rakan sekelas dan pensyarah mengenai jualan kami.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgihan" aria-expanded="false" aria-controls="collapseAgihan">
+                                <strong>7.1.4 Strategi Agihan</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseAgihan" class="accordion-collapse collapse" data-bs-parent="#accordion4P">
+                            <div class="accordion-body">
+                                <p>Strategi agihan kami ialah saluran terus, iaitu dari kami sebagai pengeluar terus kepada pelanggan. Kami tidak guna orang tengah.</p>
+                                <p>Lokasi jualan kami adalah strategik, mudah alih, dan mengikut acara. Kami tiada kedai tetap. Lokasi jualan utama kami adalah di kawasan tapak Merdeka FUN RUN (3 Sep 2025) dan di dewan PERTANDINGAN ESPORT KEMAS (5 Sep 2025). Sebagai perkhidmatan tambahan, jika ada lebihan stok, kami boleh tawarkan khidmat penghantaran (COD).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mt-5 mb-3">Bukti Pemasaran</h3>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="jualan di instagram.png" class="card-img-top" alt="Pemasaran Instagram">
+                            <div class="card-body">
+                                <h5 class="card-title">a) Instagram Marketing</h5> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="Jualan di wasap.png" class="card-img-top" alt="Pemasaran Whatsapp">
+                            <div class="card-body">
+                                <h5 class="card-title">b) Whatsapp Marketing</h5> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="card">
+                            <img src="jualan di gerai.jpg" class="card-img-top object-fit-cover" alt="Jualan di Gerai">
+                                <div class="card-body">
+                                    <h5 class="card-title">c) Jualan di Gerai</h5> 
+                                </div>
+                           </div>
+                    </div>
+                  
+                </div>
+
+                <h3 class="mt-5 mb-3">Analisa Persaingan</h3> 
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Nama Pesaing</th>
+                                <th>Kekuatan</th>
+                                <th>Kelemahan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>A&I FAMILY</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Mempunyai produk minuman pencuci mulut yang popular dan 'trendy' (Air Cha bang ang float), yang merupakan pesaing terus kepada ABC.</li>
+                                        <li>Menawarkan pelbagai pilihan pencuci mulut manis (Kek Batik, Cheesekut) yang menarik sasaran pelanggan yang sama (peminat manisan).</li>
+                                        <li>Produk Cheesekut juga berasaskan keju, mungkin menarik pelanggan yang sama dengan Rempeyek Cheese anda.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Tiada snek yang 'savory' (masin/pedas). Pelanggan yang mahu snek rangup masin tiada pilihan selain membeli dari gerai anda (Rempeyek Cheese).</li>
+                                        <li>Produk mereka (kek, cheesekut) mungkin lebih leceh untuk dimakan sambil berjalan berbanding snek kering.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gemonade</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Menawarkan snek panas (French Fries), satu kelebihan unik yang anda tidak ada.</li>
+                                        <li>Mempunyai pelbagai jenis snek (Fries, Popcorn) yang bersaing secara langsung dengan Rempeyek Cheese anda untuk pasaran snek.</li>
+                                        <li>Puding Buah adalah pencuci mulut sejuk yang lebih ringkas dan mungkin lebih murah, menjadi alternatif kepada ABC anda.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Tidak menyenaraikan sebarang produk minuman. Ini satu kelemahan besar.</li>
+                                        <li>Pelanggan yang membeli snek mereka (Fries/Popcorn) kemungkinan besar akan terpaksa membeli minuman dari gerai lain (iaitu gerai anda).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Selera 4 Student</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Menjual makanan berat (Nasi Ayam Penyet), yang boleh menarik trafik pelanggan yang sangat ramai (orang datang untuk makan).</li>
+                                        <li>Air Balang adalah pesaing kuat untuk ABC dan Air Minuman anda kerana harganya biasanya murah dan kuantitinya banyak.</li>
+                                        <li>Pelanggan yang membeli nasi mungkin akan terus membeli air balang mereka sebagai set kombo.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Fokus utama pada makanan berat. Pelanggan mungkin sudah kenyang dan tidak mahu membeli pencuci mulut (ABC) atau snek (Rempeyek Cheese) selepas itu.</li>
+                                        <li>Tiada langsung snek ringan. Ini peluang besar untuk anda menjual Rempeyek Cheese kepada pelanggan mereka.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        
+        <div id="kewangan-content" class="page-content">
+            <section class="bg-light py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Aspek Kewangan</h2> 
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h3 class="mb-3">Ringkasan Untung/Rugi</h3>
+                            <table class="table table-bordered shadow-sm bg-white">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>BIL</th>
+                                        <th>PERKARA</th>
+                                        <th class="text-end">JUMLAH (RM)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>8.1</td>
+                                        <td>KOS BAHAN (6.1)</td>
+                                        <td class="text-end">694.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>KOS OPERASI (6.2)</td>
+                                        <td class="text-end">52.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.2</td>
+                                        <td><strong>JUMLAH JUALAN</strong></td>
+                                        <td class="text-end"><strong>1139.40</strong></td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td></td>
+                                        <td class="fw-bold">JUMLAH UNTUNG</td>
+                                        <td class="text-end fw-bold">394.40</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <h3 class="mb-3">Buku Tunai</h3> 
+                        <p><strong>NAMA PERNIAGAAN: Oylicious</strong><br>
+                        <span class="text-muted">BUKU TUNAI BAGI TEMPOH OGOS 2025 SEHINGGA 07 OKTOBER 2025</span></p>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm" style="font-size: 0.8rem;">
+                                <thead class="table-dark text-center">
+                                    <tr>
+                                        <th colspan="5">DT (DEBIT)</th> 
+                                        <th colspan="5">KT (KREDIT)</th> 
+                                    </tr>
+                                    <tr>
+                                        <th>TARIKH</th> 
+                                        <th>BUTIR</th> 
+                                        <th>FOLIO</th> 
+                                        <th class="text-end">TUNAI</th> 
+                                        <th class="text-end">BANK</th> 
+                                        <th>TARIKH</th> 
+                                        <th>BUTIR</th>
+                                        <th>FOLIO</th> 
+                                        <th class="text-end">TUNAI</th> 
+                                        <th class="text-end">BANK</th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1/8/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">9.7</td> <td class="text-end">26.8</td>
+                                        <td>23/8/2025</td> <td>STOK AIR</td> <td></td> <td></td> <td class="text-end">127</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8/24/2025</td> <td>jualan aneka air</td> <td></td> <td class="text-end">9.6</td> <td class="text-end">11.6</td>
+                                        <td>23/8/2025</td> <td>BAHAN ABC</td> <td></td> <td class="text-end">83.10</td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8/26/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">36.9</td> <td></td>
+                                        <td>23/8/2025</td> <td>REMPEYEK CHEESE</td> <td></td> <td class="text-end">150</td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8/26/2025</td> <td>jualan aneka air</td> <td></td> <td class="text-end">18.8</td> <td class="text-end">4.9</td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                      <tr>
+                                        <td>8/27/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">14</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8/28/2025</td> <td>jualan aneka air</td> <td></td> <td class="text-end">11.9</td> <td class="text-end">17.4</td>
+                                        <td></td> <td>baki h/b</td> <td></td> <td class="text-end">-77.00</td> <td></td>
+                                    </tr>
+                                    <tr class="table-light fw-bold">
+                                        <td colspan="3" class="text-end">JUMLAH</td>
+                                        <td class="text-end">127.00</td> <td class="text-end">111.20</td>
+                                        <td colspan="3" class-="text-end">JUMLAH</td>
+                                        <td class="text-end">277.00</td> <td class="text-end">127.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td> <td>baki b/b</td> <td></td> <td class="text-end">77</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3/9/2025</td> <td>Jualan KEROPOK LEKOR</td> <td></td> <td class="text-end">50</td> <td class="text-end">100</td>
+                                        <td>2/9/2025</td> <td>BAHAN ABC</td> <td></td> <td class="text-end">92.4</td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3/9/2025</td> <td>Jualan ABC</td> <td></td> <td class="text-end">379</td> <td></td>
+                                        <td>4/9/2025</td> <td>STOK AIR</td> <td></td> <td></td> <td class="text-end">300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5/9/2025</td> <td>Jualan ABC</td> <td></td> <td class="text-end">70</td> <td></td>
+                                        <td>11/9/2025</td> <td>STOK AIR</td> <td></td> <td></td> <td class="text-end">74</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/2/2025</td> <td>jualan aneka air</td> <td></td> <td class="text-end">59.6</td> <td class="text-end">18.5</td>
+                                        <td>18/9/2025</td> <td>STOK AIR</td> <td></td> <td class="text-end">80</td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/6/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">12</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/21/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">4.9</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/22/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">12.2</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/23/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">6.6</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/24/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">12.5</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/25/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">25.3</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/26/2025</td> <td>jualan aneka air</td> <td></td> <td class="text-end">8.5</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/27/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">13.3</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/28/2025</td> <td>jualan aneka ar</td> <td></td> <td class="text-end">36.5</td> <td></td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9/29/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">34.8</td> <td></td>
+                                        <td></td> <td>baki h/b</td> <td></td> <td class="text-end">262.5</td> <td class="text-end">515.90</td>
+                                    </tr>
+                                    <tr class="table-light fw-bold">
+                                        <td colspan="3" class="text-end">JUMLAH</td>
+                                        <td class="text-end">580.2</td> <td class="text-end">608.30</td>
+                                        <td colspan="3" class-="text-end">JUMLAH</td>
+                                        <td class="text-end">580.2</td> <td class="text-end">608.30</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td> <td>baki b/b</td> <td></td> <td class="text-end">262.5</td> <td class="text-end">515.9</td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7/10/2025</td> <td>Jualan aneka air</td> <td></td> <td class="text-end">43.3</td> <td></td>
+                                        <td>4/10/2025</td> <td>STOK AIR</td> <td></td> <td class="text-end">70</td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                        <td>11/10/2025</td> <td>STOK AIR</td> <td></td> <td class="text-end">74</td> <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                        <td></td> <td>baki h/b</td> <td></td> <td class="text-end">118.5</td> <td class="text-end">1139.4</td>
+                                    </tr>
+                                    <tr class="table-light fw-bold">
+                                        <td colspan="3" class="text-end">JUMLAH</td>
+                                        <td class="text-end">262.5</td> <td class="text-end">623.5</td>
+                                        <td colspan="3" class-="text-end">JUMLAH</td>
+                                        <td class="text-end">262.5</td> <td class="text-end">1139.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td> <td>baki b/b</td> <td></td> <td class="text-end">118.5</td> <td class="text-end">1139.4</td>
+                                        <td></td> <td></td> <td></td> <td></td> <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="kesimpulan-content" class="page-content">
+               <section class="container my-5">
+                <h2 class="text-center mb-4">Kesimpulan & Cadangan</h2> 
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <p>Antara cadangan penambahbaikan bagi produk dan perkhidmatan Oylicious ialah dengan meningkatkan kualiti produk melalui maklum balas pelanggan. Seperti yang sering dikatakan, "Pelanggan merupakan raja dalam perniagaan" dan "pelanggan sentiasa betul." Oleh itu, Oylicious boleh menyediakan borang maklum balas selepas pembelian atau undi di laman sosial bagi mengetahui citarasa pelanggan. Dengan cara ini, Oylicious dapat memperbaiki resepi, rasa, dan persembahan produk.</p>
+                        <p>Seterusnya, Oylicious boleh memasarkan produk sebelum pengeluaran. Oylicious boleh mengumumkan produk baharu seperti variasi rasa ABC atau minuman baharu di laman sosial dengan memberikan hint dan manfaat produk. Apabila produk dilancarkan, pelanggan sedia menantikan kehadirannya.</p>
+                        <p>Dari segi pemasaran, Oylicious perlu terus kreatif dan menonjolkan identiti jenama. Peniaga boleh mencipta slogan yang mudah diingati seperti "Sejuk, Lazat, dan Menggoda - Hanya di Oylicious" atau menggunakan video promosi, siaran langsung (live), dan iklan media sosial. Pendekatan kreatif ini bukan sahaja meningkatkan minat pelanggan baharu tetapi juga mengekalkan pelanggan sedia ada.</p>
+                        <p>Akhir sekali, Oylicious boleh memberi kelebihan kepada pelanggan setia. Antara langkah yang boleh diambil ialah memberi kad keahlian, diskaun istimewa, atau hadiah percuma selepas beberapa kali pembelian. Selain itu, Oylicious boleh menambah teks promosi atau kod diskaun pada resit pembelian untuk menarik pelanggan kembali. Strategi seperti ini dapat membina hubungan jangka panjang dengan pelanggan.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="lampiran-content" class="page-content">
+            <section class="container my-5">
+                <h2 class="text-center mb-4">Lampiran</h2> 
+                <h3 class="mb-3">Jadual Perlaksanaan Projek</h3> 
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead class="table-light">
+                            <tr>
+                                <th>No.</th>
+                                <th>Aktiviti</th>
+                                <th>M1</th> <th>M2</th> <th>M3-4</th> <th>M5-6</th> <th>M7</th> <th>M8</th> <th>M9</th> <th>M10</th> <th>M11</th> <th>M12</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td>1</td> <td>Idea perniagaan dan cadangan produk</td> 
+                                <td>&check;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td> 
+                            </tr>
+                            <tr> 
+                                <td>2</td> <td>Hantar cadangan ide perniagaan</td> 
+                                <td></td><td>&check;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td> 
+                            </tr>
+                            <tr> 
+                                <td>3</td> <td>Perbincangan kumpulan</td> 
+                                <td></td><td></td><td>&check;</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td> 
+                            </tr>
+                            <tr> 
+                                <td>4</td> <td>Perbincangan dengan mentor / penyelia projek</td> 
+                                <td></td><td></td><td></td><td>&check;</td><td></td><td></td><td></td><td></td><td></td><td></td> 
+                            </tr>
+                            <tr> 
+                                <td>5</td> <td>Jualan bermula pada 1/8/2025</td> 
+                                <td></td><td></td><td></td><td></td><td>&check;</td><td></td><td></td><td></td><td></td><td></td> 
+                            </tr>
+                            <tr> 
+                                <td>6</td> <td>Jualan Tamat 7/10/2025</td> 
+                                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&check;</td><td></td><td></td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="mt-5 mb-3">Business Model Canvas (BMC)</h3> 
+                <div class="table-responsive">
+                    <table class="table table-bordered bmc-table" style="min-height: 500px; font-size: 0.85rem;">
+                        <tbody>
+                            <tr>
+                                <td style="width: 20%;">
+                                    <h5>Key Partners</h5>
+                                    <ul>
+                                        <li>Mesin pengisar ais batu dari Puan Azma</li>
+                                        <li>Menyewa kereta sebagai tempat jualan tambahan</li>
+                                        <li>Vendor keropok lekor</li>
+                                        <li>Resepi ABC diambil dari Puan Rusnayani</li>
+                                    </ul>
+                                </td>
+                                <td style="width: 20%;">
+                                    <h5>Key Activities</h5>
+                                    <ul>
+                                        <li>Menyediakan dan menghasilkan ABC menggunakan resepi khas</li>
+                                        <li>Mengumpul maklum balas pelanggan</li>
+                                    </ul>
+                                </td>
+                                <td style="width: 20%;">
+                                    <h5>Value Propositions</h5>
+                                    <ul>
+                                        <li>Menawarkan ABC dengan resepi asli 8 bahan segar</li>
+                                        <li>Harga berpatutan</li>
+                                        <li>Jaminan rasa kelazatan</li>
+                                        <li>COD secara percuma</li>
+                                    </ul>
+                                </td>
+                                <td style="width: 20%;">
+                                    <h5>Customer Relationship</h5>
+                                    <p>Jaminan rasa kelazatan & bahan dicampurkan yang menyerlahkan rasa kenikmatan abc dan makanan.</p>
+                                    
+                                    <h5 class="mt-3">Channels</h5>
+                                    <p>Instagram page: (oylicious_superb)</p>
+                                </td>
+                                <td style="width: 20%;">
+                                    <h5>Customer Segments</h5>
+                                    <p>Pelajar Politeknik, Pensyarah dan seluruh staff di Politeknik.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <h5>Cost Structure</h5>
+                                    <p>RM 244 + RM 300 + RM 150 + RM 24 = RM 718</p>
+                                </td>
+                                <td colspan="3">
+                                    <h5>Revenue Stream</h5>
+                                    <p>1. ABC = RM 449<br>
+                                        2. AIR MINUMAN = RM 400<br>
+                                        3. REMPEYEK = RM 225<br>
+                                        4. KEROPOK LEKOR = RM 50<br>
+                                        <strong>TOTAL: RM 1224</strong></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    
+    <footer class="text-center bg-dark text-white py-4">
+        <div class="container">
+            <p class="mb-0">Portfolio Oylicious &copy; 2025 | DFK30033 - Cyberpreneurship</p>
+            <p class="mb-0">Politeknik Besut</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            const navLinksContainer = document.querySelector(".nav-links");
+            const allPages = document.querySelectorAll(".page-content");
+            const allNavLinks = document.querySelectorAll(".nav-links .nav-link");
+            
+            navLinksContainer.addEventListener("click", function(e) {
+                e.preventDefault();
+                const clickedLink = e.target;
+                
+                if (clickedLink.tagName === 'A') {
+                    const targetPageId = clickedLink.getAttribute("data-target-page");
+                    const targetPage = document.getElementById(targetPageId);
+                    
+                    allPages.forEach(page => page.style.display = "none");
+                    if (targetPage) {
+                        targetPage.style.display = "block";
+                    }
+                    
+                    allNavLinks.forEach(link => link.classList.remove("active"));
+                    clickedLink.classList.add("active");
+                }
+            });
+
+            const brandLogo = document.querySelector(".navbar-brand");
+            brandLogo.addEventListener("click", function(e) {
+                e.preventDefault();
+                const targetPageId = brandLogo.getAttribute("data-target-page");
+                const targetPage = document.getElementById(targetPageId);
+
+                allPages.forEach(page => page.style.display = "none");
+                if (targetPage) {
+                    targetPage.style.display = "block";
+                }
+
+                allNavLinks.forEach(link => link.classList.remove("active"));
+                document.querySelector('.nav-links a[data-target-page="home-content"]').classList.add("active");
+            });
+
+        });
+    </script>
+</body>
+</html>
